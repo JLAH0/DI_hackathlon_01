@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css"></head>
 <body>
     <!-- <h1>this is a test</h1> -->
- <!-- <div class="tab-bar">
+    <nav>
+        <div class="tab-bar">
         <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Simple Calculater</a>
@@ -19,7 +20,7 @@
               <a class="nav-link" href="#">Currency Conversions</a>
             </li>
           </ul>
-    </div>  -->
+    </nav>
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-3"></div>
@@ -27,116 +28,116 @@
             <div class="row">
             </div>
             <div class="col my-3">
-                <textarea name="" id="data" cols="10" rows="2" class="full-width" readonly></textarea>
+                <textarea name="" id="display" cols="10" rows="2" class="full-width" readonly></textarea>
             </div>
             <div class="row">
                 <div class="col-3">
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">C</button>
+                            <button id="clear" class="full-width p-2 mb-3">C</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">7</button>
+                            <button class="full-width p-2 mb-3 number cal-btn ">7</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">4</button>
+                            <button class="full-width p-2 mb-3 number cal-btn">4</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">1</button>
+                            <button class="full-width p-2 mb-3 number cal-btn">1</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">0</button>
+                            <button class="full-width p-2 mb-3 number cal-btn">0</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">C</button>
+                            <button id="memory" class="full-width p-2 mb-3">M</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">8</button>
+                            <button class="full-width p-2 mb-3 number">8</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">5</button>
+                            <button class="full-width p-2 mb-3 number">5</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">2</button>
+                            <button class="full-width p-2 mb-3 number">2</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">0</button>
+                            <button id="coma" class="full-width p-2 mb-3">,</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">%</button>
+                            <button id="percentage" class="full-width p-2 mb-3">%</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">9</button>
+                            <button class="full-width p-2 mb-3 number">9</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">6</button>
+                            <button class="full-width p-2 mb-3 number">6</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">3</button>
+                            <button class="full-width p-2 mb-3 number">3</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">,</button>
+                            <button id="equal" class="full-width p-2 mb-3">=</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">/</button>
+                            <button id="division" class="full-width p-2 mb-3" >/</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">*</button>
+                            <button id="multiplication" class="full-width p-2 mb-3">*</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">-</button>
+                            <button id="subtraction" class="full-width p-2 mb-3">-</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="full-width p-2 mb-3">+</button>
+                            <button id="addition" class="full-width btnplusheight p-2 mb-3">+</button>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col">
                             <button class="full-width p-2 mb-3">=</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
