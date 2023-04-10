@@ -135,8 +135,6 @@ const getMetalPromise = () => {
 
   }
 
-let gold, silver, platinum, palladium, timestamp
-
 const getMetal = getMetalPromise().then(data => {
   //console.log(data);
   for(i = 0; i < data.length; i++){
