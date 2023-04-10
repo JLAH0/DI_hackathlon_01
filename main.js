@@ -1,15 +1,15 @@
 /* Calculator Function */
 
-function getHistory(){
+const getHistory = () => {
 	return document.getElementById("history-value").innerText.replace("÷","/").replace("×","*");
 }
-function printHistory(num){
+const printHistory = (num) => {
 	document.getElementById("history-value").innerText = num;
 }
-function getOutput(){
+const getOutput = () => {
 	return document.getElementById("output-value").innerText;
 }
-function printOutput(num){
+const printOutput = (num) => {
 	if(num==""){
 		document.getElementById("output-value").innerText=num;
 	}
@@ -17,7 +17,7 @@ function printOutput(num){
 		document.getElementById("output-value").innerText=getFormattedNumber(num);
 	}	
 }
-function getFormattedNumber(num){
+const getFormattedNumber = (num) => {
 	if(num=="-"){
 		return "";
 	}
@@ -25,7 +25,7 @@ function getFormattedNumber(num){
 	let value = n.toLocaleString("en");
 	return value;
 }
-function reverseNumberFormat(num){
+const reverseNumberFormat = (num) => {
 	return Number(num.replace(/,/g,''));
 }
 let operator = document.getElementsByClassName("operator");
