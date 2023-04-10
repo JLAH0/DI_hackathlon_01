@@ -1,4 +1,3 @@
-//used by previn
 /* Calculator Function */
 
 function getHistory(){
@@ -22,30 +21,30 @@ function getFormattedNumber(num){
 	if(num=="-"){
 		return "";
 	}
-	var n = Number(num);
-	var value = n.toLocaleString("en");
+	let n = Number(num);
+	let value = n.toLocaleString("en");
 	return value;
 }
 function reverseNumberFormat(num){
 	return Number(num.replace(/,/g,''));
 }
-var operator = document.getElementsByClassName("operator");
-for(var i =0;i<operator.length;i++){
+let operator = document.getElementsByClassName("operator");
+for(let i =0;i<operator.length;i++){
 	operator[i].addEventListener('click',function(){
 		if(this.id=="clear"){
 			printHistory("");
 			printOutput("");
 		}
 		else if(this.id=="backspace"){
-			var output=reverseNumberFormat(getOutput()).toString();
+			let output=reverseNumberFormat(getOutput()).toString();
 			if(output){//if output has a value
 				output= output.substr(0,output.length-1);
 				printOutput(output);
 			}
 		}
 		else{
-			var output=getOutput();
-			var history=getHistory();
+			let output=getOutput();
+			let history=getHistory();
 			if(output==""&&history!=""){
 				if(isNaN(history[history.length-1])){
 					history= history.substr(0,history.length-1);
@@ -55,7 +54,7 @@ for(var i =0;i<operator.length;i++){
 				output= output==""?output:reverseNumberFormat(output);
 				history=history+output;
 				if(this.id=="="){
-					var result= eval(history);
+					let result= eval(history);
 					printOutput(result);
 					printHistory("");
 				}
@@ -69,10 +68,10 @@ for(var i =0;i<operator.length;i++){
 		
 	});
 }
-var number = document.getElementsByClassName("number");
-for(var i =0;i<number.length;i++){
+let number = document.getElementsByClassName("number");
+for(let i =0;i<number.length;i++){
 	number[i].addEventListener('click',function(){
-		var output=reverseNumberFormat(getOutput());
+		let output=reverseNumberFormat(getOutput());
 		if(output!=NaN){ //if output is a number
 			output=output+this.id;
 			printOutput(output);
@@ -84,9 +83,9 @@ for(var i =0;i<number.length;i++){
 
 //function to define a random color
 const getRandomColor = () => {
-    var letters = "0123456789ABCDEF";
-    var color = "#";
-    for (var i = 0; i < 6; i++) {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
@@ -94,8 +93,8 @@ const getRandomColor = () => {
   
   //function to call the background div and set the color
   const setRandomBackground = () => {
-    var div = document.querySelector("body");
-    var color = getRandomColor();
+    let div = document.querySelector("body");
+    let color = getRandomColor();
     div.style.transition = "background-color 2s ease-in-out";
     div.style.backgroundColor = color;
   }
