@@ -153,3 +153,9 @@ tr{
     font-weight: 700;
     font-size: 20px;
 }
+
+#information td{
+	text-align: right;
+	font-weight: 300;
+	font-size: 10px;
+}
