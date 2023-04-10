@@ -1,14 +1,20 @@
 /* Calculator Function */
 
+// change all characters into math operators
 const getHistory = () => {
 	return document.getElementById("history-value").innerText.replace("÷","/").replace("×","*");
 }
+
+// print on the history display
 const printHistory = (num) => {
 	document.getElementById("history-value").innerText = num;
 }
+
 const getOutput = () => {
 	return document.getElementById("output-value").innerText;
 }
+
+// print on the main display
 const printOutput = (num) => {
 	if(num==""){
 		document.getElementById("output-value").innerText=num;
@@ -17,6 +23,8 @@ const printOutput = (num) => {
 		document.getElementById("output-value").innerText=getFormattedNumber(num);
 	}	
 }
+
+//get number format using english format
 const getFormattedNumber = (num) => {
 	if(num=="-"){
 		return "";
@@ -25,9 +33,13 @@ const getFormattedNumber = (num) => {
 	let value = n.toLocaleString("en");
 	return value;
 }
+
+
 const reverseNumberFormat = (num) => {
 	return Number(num.replace(/,/g,''));
 }
+
+// Main code for calculation
 let operator = document.getElementsByClassName("operator");
 for(let i =0;i<operator.length;i++){
 	operator[i].addEventListener('click',function(){
@@ -68,6 +80,7 @@ for(let i =0;i<operator.length;i++){
 		
 	});
 }
+
 let number = document.getElementsByClassName("number");
 for(let i =0;i<number.length;i++){
 	number[i].addEventListener('click',function(){
@@ -102,9 +115,7 @@ const getRandomColor = () => {
   //initialize background color change function
   setInterval(setRandomBackground, 3000);
 
-  /* Metals Api */
-
-  /* METAL PRICE */
+/* Metals Api */
 
 const getMetalPromise = () => {
     const url = 'https://api.metals.live/v1/spot';
